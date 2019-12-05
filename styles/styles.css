@@ -1,0 +1,130 @@
+@keyframes float {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+      transform: translate3d(0,60px,0)
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  align-items: center;
+  background-attachment: fixed;
+  background-color: #2680ff;
+  background-image: url('../assets/bg_white.svg');
+  background-position: 200% 180px;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+
+.header-title {
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 200;
+  letter-spacing: 0.2rem;
+  margin: 2rem 0;
+}
+
+.header-logo {
+  width: 220px;
+}
+
+section {
+  border: 1px solid gray;
+  height: 100vh;
+  width: 100vw;
+}
+
+.intro {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro-text {
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.fadeInUp {
+  opacity: 0;
+  animation-name: fadeInUp;
+}
+
+.step {
+  border: 1px solid blue;
+  width: 100px;
+  height: 200px;
+}
+
+.baloon-svg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.baloon {
+  z-index: 2000;
+  animation-iteration-count: infinite;
+  animation-name: float;
+  animation-timing-function: linear;
+  position: relative !important;
+}
+
+.baloon-1 {
+  animation-duration: 4s;
+}
+
+.baloon-2 {
+  animation-duration: 6s;
+}
+
+.baloon-3 {
+  animation-duration: 8s;
+}
+
+.marga {
+  position: relative;
+
+}
+
+.marga > svg {
+  position: absolute;
+  bottom: 0;
+}
+
+.marga-title {
+  font-family: Mansalva, cursive;
+}
